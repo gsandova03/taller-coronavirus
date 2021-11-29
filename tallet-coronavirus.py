@@ -16,3 +16,7 @@ data['Recuperado'].replace('Fallecido', 'fallecido', inplace=True)
 # 1. Numero de casos en el pais
 print('---------------numero de casos:')
 print(data['ID de caso'].count())
+
+# 2. Numero de municipios afectados
+print('---------------numero de municipios:')
+print(data['Nombre municipio'].unique().size)
