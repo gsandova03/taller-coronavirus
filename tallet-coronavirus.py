@@ -150,3 +150,7 @@ print('-------------------porcentaje de personas por atencion:')
 #32 Haga un gráfico de barras por atencion de toda Colombia
 print('---------------------grafico por atencion: ')
 data.groupby('Recuperado').size().sort_values().plot(kind = 'bar')
+
+#33 Haga un gráfico de barras por Sexo de toda Colombia
+print('--------------------grafica por sexo de cada persona: ')
+data.groupby('Sexo').size().sort_values().plot(kind = 'bar')
