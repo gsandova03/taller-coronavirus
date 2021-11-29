@@ -36,3 +36,7 @@ print(len(data[data['Recuperado'] == 'Recuperado']))
 # 6. Numero de personas que han fallecido
 print('-------------------numero de personas fallecidas:')
 print(len(data[data['Recuperado'] == 'fallecido']))
+
+# 7. Ordenar de mayor a menor por tipo de caso (Importado, en estudio, relacionado)
+print('--------------------------------tipo de caso ordenado:')
+print(data.groupby('Tipo de contagio').size().sort_values(ascending=False))
