@@ -146,3 +146,7 @@ print(data[data['Recuperado'] == 'fallecido'].groupby('Edad').size().sort_values
 #31 Liste el porcentaje de personas por atencion en toda colombia
 print('-------------------porcentaje de personas por atencion:')
 (data.groupby('Recuperado').size() / data['ID de caso'].max()) * 100
+
+#32 Haga un gráfico de barras por atencion de toda Colombia
+print('---------------------grafico por atencion: ')
+data.groupby('Recuperado').size().sort_values().plot(kind = 'bar')
