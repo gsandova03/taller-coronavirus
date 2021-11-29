@@ -48,3 +48,7 @@ print(data['Nombre departamento'].unique().size)
 # 9. Liste los departamentos afectados sin repetirlos
 print('------------------------departamentos afectados sin repetir:')
 print(data['Nombre departamento'].unique())
+
+# 10. Ordene de mayor a menor por tipo de atencion
+print('-------------------------------tipos de atencion ordenado:')
+print(data.groupby('Ubicación del caso').size().sort_values(ascending=False))
