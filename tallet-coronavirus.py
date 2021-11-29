@@ -88,3 +88,7 @@ print(data.groupby(['Nombre departamento', 'Nombre municipio','Sexo']).size().so
 # 19. Liste el promedio de edad de contagiados por hombre y mujeres por ciudad por departamento
 print('---------------------------------promedio de edad de contagios: ')
 print(data.groupby(['Nombre departamento','Nombre municipio', 'Sexo']).Edad.mean())
+
+# 20. Liste de mayor a menor el numero de contagiados por pais de procedencia
+print('----------------------------------numero de contagios por pais: ')
+print(data.groupby('Nombre del país').size().sort_values(ascending=False))
