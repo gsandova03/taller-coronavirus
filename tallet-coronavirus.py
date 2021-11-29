@@ -96,3 +96,10 @@ print(data.groupby('Nombre del país').size().sort_values(ascending=False))
 # 21. Liste de mayor a menor las fechas donde se presentaron mas contagios
 print('-------------------------------fechas con mas contagios: ')
 print(data.groupby('Fecha de diagnóstico').size().sort_values(ascending=False))
+
+# 22. Diga cual es la tasa de mortalidad y recuperacion que tiene toda colombia
+print('----------------tasa de mortalidad y recuperacion')
+# Tasa mortalidad
+print(((len(data[data['Recuperado'] == 'fallecido'])) * 100) / (len(data)))
+# Tasa de recuperados
+print(((len(data[data['Recuperado'] == 'Recuperado'])) * 100) / (len(data)))
