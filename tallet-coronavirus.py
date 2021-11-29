@@ -32,3 +32,7 @@ print(len(data[data['Ubicación del caso'] == 'casa']))
 # 5. Numero de personas que se encuentran recuperados
 print('-------------------numero de personas recuperadas:')
 print(len(data[data['Recuperado'] == 'Recuperado']))
+
+# 6. Numero de personas que han fallecido
+print('-------------------numero de personas fallecidas:')
+print(len(data[data['Recuperado'] == 'fallecido']))
