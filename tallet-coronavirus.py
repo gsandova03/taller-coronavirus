@@ -109,3 +109,11 @@ print('-------------tasa de mortalidad y recuperacion por departamento: ')
 print((data[data['Recuperado'] == 'fallecido'].groupby('Nombre departamento').size() / len(data)) * 100)
 # Recuperacion
 print((data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size() / len(data)) * 100)
+
+#27  Grafique las curvas de contagio, muerte y recuperación de toda Colombia acumulados
+#contagiados
+data.groupby('Fecha de diagnóstico').size().sort_values().plot()
+#Fallecidos
+data[data['Recuperado'] == 'fallecido'].groupby('Fecha de diagnóstico').size().sort_values().plot()
+#Recuperados
+data[data['Recuperado'] == 'Recuperado'].groupby('Fecha de diagnóstico').size().sort_values().plot()
