@@ -136,3 +136,7 @@ data.groupby('Ubicación del caso').size().sort_values(ascending = False).head(1
 data[data['Recuperado'] == 'fallecido'].groupby('Ubicación del caso').size().sort_values(ascending = False).head(10).plot()
 #Recuperados
 data[data['Recuperado'] == 'Recuperado'].groupby('Ubicación del caso').size().sort_values(ascending = False).head(10).plot()
+
+#30 Liste de mayor a menor la cantidad de Fallecidos por edad en toda colombia
+print('--------------------------mayor a menor de edad de los fallecidos')
+print(data[data['Recuperado'] == 'fallecido'].groupby('Edad').size().sort_values(ascending = False))
