@@ -56,3 +56,7 @@ print(data.groupby('Ubicación del caso').size().sort_values(ascending=False))
 # 11. Liste de mayor a menor los 10 departamentos con mas casos de contagiados
 print('----------------------------departamento con mas casos de contagio: ')
 print(data.groupby('Nombre departamento').size().sort_values(ascending=False).head(10))
+
+# 12. Liste de mayor a menor los 10 departamentos con mas casos de fallecidos
+print('--------------------------departamento con mas fallecidos:')
+print(data[data['Recuperado'] == 'fallecido'].groupby('Nombre departamento').size().sort_values(ascending=False).head(10))
