@@ -103,3 +103,9 @@ print('----------------tasa de mortalidad y recuperacion')
 print(((len(data[data['Recuperado'] == 'fallecido'])) * 100) / (len(data)))
 # Tasa de recuperados
 print(((len(data[data['Recuperado'] == 'Recuperado'])) * 100) / (len(data)))
+
+# 23. Liste la tasa de mortalidad y recupercaion que tiene cada departamento# Mortalidad
+print('-------------tasa de mortalidad y recuperacion por departamento: ')
+print((data[data['Recuperado'] == 'fallecido'].groupby('Nombre departamento').size() / len(data)) * 100)
+# Recuperacion
+print((data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size() / len(data)) * 100)
