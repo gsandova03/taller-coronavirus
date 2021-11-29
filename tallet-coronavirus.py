@@ -80,3 +80,7 @@ print(data[data['Recuperado'] == 'Recuperado'].groupby('Nombre municipio').size(
 # 17. Liste agrupado por departamento y en orden de mayor a menor las ciudades con mas casos de contagiados
 print('----------------------departamentos con mas casos de contagios:')
 print(data.groupby(['Nombre departamento', 'Nombre municipio']).size().sort_values(ascending=False))
+
+# 18.  Numero de mujeres y hombres contagiados por ciudad por departamento
+print('-----------------------hombres y mujeres contagiados por ciudad: ')
+print(data.groupby(['Nombre departamento', 'Nombre municipio','Sexo']).size().sort_values(ascending=False))
