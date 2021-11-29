@@ -154,3 +154,7 @@ data.groupby('Recuperado').size().sort_values().plot(kind = 'bar')
 #33 Haga un gráfico de barras por Sexo de toda Colombia
 print('--------------------grafica por sexo de cada persona: ')
 data.groupby('Sexo').size().sort_values().plot(kind = 'bar')
+
+#34 Haga un gráfico de barras por tipo de toda Colombia
+print('-----------------------grafico por tipo de colombia: ')
+data.groupby('Tipo de contagio').size().sort_values().plot(kind = 'bar')
