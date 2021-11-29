@@ -24,3 +24,7 @@ print(data['Nombre municipio'].unique().size)
 # 3. Liste los municipios afectados (sin repetirlos)
 print('---------------municipios afectados:')
 print(data['Nombre municipio'].unique())
+
+# 4. Numero de personas que se encuentran en atencion en casa
+print('--------------------numero de personas atencion en casa:')
+print(len(data[data['Ubicación del caso'] == 'casa']))
