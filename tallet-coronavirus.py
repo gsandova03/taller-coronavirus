@@ -12,3 +12,7 @@ plt.xticks(rotation=90)
 data['Ubicación del caso'].replace('Casa', 'casa', inplace=True)
 data['Ubicación del caso'].replace('CASA', 'casa', inplace=True)
 data['Recuperado'].replace('Fallecido', 'fallecido', inplace=True)
+
+# 1. Numero de casos en el pais
+print('---------------numero de casos:')
+print(data['ID de caso'].count())
