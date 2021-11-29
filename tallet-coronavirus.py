@@ -92,3 +92,7 @@ print(data.groupby(['Nombre departamento','Nombre municipio', 'Sexo']).Edad.mean
 # 20. Liste de mayor a menor el numero de contagiados por pais de procedencia
 print('----------------------------------numero de contagios por pais: ')
 print(data.groupby('Nombre del país').size().sort_values(ascending=False))
+
+# 21. Liste de mayor a menor las fechas donde se presentaron mas contagios
+print('-------------------------------fechas con mas contagios: ')
+print(data.groupby('Fecha de diagnóstico').size().sort_values(ascending=False))
