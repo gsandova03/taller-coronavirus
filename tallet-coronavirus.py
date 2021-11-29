@@ -76,3 +76,7 @@ print(data[data['Recuperado'] == 'fallecido'].groupby('Nombre municipio').size()
 # 16. Liste de mayor a menor los 10 municipios con mas casos de recuperados
 print('----------------------------------municipios con mas recuperados: ')
 print(data[data['Recuperado'] == 'Recuperado'].groupby('Nombre municipio').size().sort_values(ascending=False).head(10))
+
+# 17. Liste agrupado por departamento y en orden de mayor a menor las ciudades con mas casos de contagiados
+print('----------------------departamentos con mas casos de contagios:')
+print(data.groupby(['Nombre departamento', 'Nombre municipio']).size().sort_values(ascending=False))
