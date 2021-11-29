@@ -40,3 +40,7 @@ print(len(data[data['Recuperado'] == 'fallecido']))
 # 7. Ordenar de mayor a menor por tipo de caso (Importado, en estudio, relacionado)
 print('--------------------------------tipo de caso ordenado:')
 print(data.groupby('Tipo de contagio').size().sort_values(ascending=False))
+
+# 8. Numero de departamentos afectados
+print('---------------------departamentos afectados: ')
+print(data['Nombre departamento'].unique().size)
