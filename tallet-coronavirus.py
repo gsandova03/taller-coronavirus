@@ -127,3 +127,12 @@ data.groupby('Nombre departamento').size().sort_values(ascending = False).head(1
 data[data['Recuperado'] == 'fallecido'].groupby('Nombre departamento').size().sort_values(ascending = False).head(10).plot()
 #Recuperados
 data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size().sort_values(ascending = False).head(10).plot()
+
+#29 Grafique las curvas de contagio, muerte y recuperación de las 10 ciudades con mas casos de contagiados acumulados
+print('----------------------------------------------------------------')
+#Contagiados
+data.groupby('Ubicación del caso').size().sort_values(ascending = False).head(10).plot()
+#Fallecidos
+data[data['Recuperado'] == 'fallecido'].groupby('Ubicación del caso').size().sort_values(ascending = False).head(10).plot()
+#Recuperados
+data[data['Recuperado'] == 'Recuperado'].groupby('Ubicación del caso').size().sort_values(ascending = False).head(10).plot()
