@@ -111,9 +111,19 @@ print((data[data['Recuperado'] == 'fallecido'].groupby('Nombre departamento').si
 print((data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size() / len(data)) * 100)
 
 #27  Grafique las curvas de contagio, muerte y recuperación de toda Colombia acumulados
+print('--------------------------------------------------------')
 #contagiados
 data.groupby('Fecha de diagnóstico').size().sort_values().plot()
 #Fallecidos
 data[data['Recuperado'] == 'fallecido'].groupby('Fecha de diagnóstico').size().sort_values().plot()
 #Recuperados
 data[data['Recuperado'] == 'Recuperado'].groupby('Fecha de diagnóstico').size().sort_values().plot()
+
+#28 Grafique las curvas de contagio, muerte y recuperación de los 10 departamentos con mas casos de contagiados acumulados
+print('----------------------------------------------------------------')
+#Contagiados
+data.groupby('Nombre departamento').size().sort_values(ascending = False).head(10).plot()
+#Fallecidos
+data[data['Recuperado'] == 'fallecido'].groupby('Nombre departamento').size().sort_values(ascending = False).head(10).plot()
+#Recuperados
+data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size().sort_values(ascending = False).head(10).plot()
