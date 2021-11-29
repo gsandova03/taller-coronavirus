@@ -28,3 +28,7 @@ print(data['Nombre municipio'].unique())
 # 4. Numero de personas que se encuentran en atencion en casa
 print('--------------------numero de personas atencion en casa:')
 print(len(data[data['Ubicación del caso'] == 'casa']))
+
+# 5. Numero de personas que se encuentran recuperados
+print('-------------------numero de personas recuperadas:')
+print(len(data[data['Recuperado'] == 'Recuperado']))
