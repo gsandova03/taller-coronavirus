@@ -140,3 +140,9 @@ data[data['Recuperado'] == 'Recuperado'].groupby('Ubicación del caso').size().s
 #30 Liste de mayor a menor la cantidad de Fallecidos por edad en toda colombia
 print('--------------------------mayor a menor de edad de los fallecidos')
 print(data[data['Recuperado'] == 'fallecido'].groupby('Edad').size().sort_values(ascending = False))
+
+
+
+#31 Liste el porcentaje de personas por atencion en toda colombia
+print('-------------------porcentaje de personas por atencion:')
+(data.groupby('Recuperado').size() / data['ID de caso'].max()) * 100
